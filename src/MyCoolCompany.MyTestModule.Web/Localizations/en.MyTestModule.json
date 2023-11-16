@@ -1,0 +1,28 @@
+{
+  "MyTestModule": {
+    "blades": {
+      "hello-world": {
+        "title": "Hello world blade"
+      }
+    }
+  },
+  "permissions": {
+    "MyTestModule:access": "Open MyTestModule menu",
+    "MyTestModule:create": "Create MyTestModule related data",
+    "MyTestModule:read": "View MyTestModule related data",
+    "MyTestModule:update": "Update MyTestModule related data",
+    "MyTestModule:delete": "Delete MyTestModule related data"
+  },
+  "settings": {
+    "MyTestModule": {
+      "MyTestModuleEnabled": {
+        "title": "MyTestModule Enabled",
+        "description": "MyTestModule Enabled setting"
+      },
+      "MyTestModulePassword": {
+        "title": "MyTestModule Password",
+        "description": "MyTestModule Password setting"
+      }
+    }
+  }
+}

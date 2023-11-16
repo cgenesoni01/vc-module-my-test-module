@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Project is a test project -->
+    <SonarQubeTestProject>true</SonarQubeTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="VirtoCommerce.NotificationsModule.Core" Version="3.405.0" />
+    <PackageReference Include="VirtoCommerce.NotificationsModule.Data" Version="3.405.0" />
+    <PackageReference Include="VirtoCommerce.NotificationsModule.TemplateLoader.FileSystem" Version="3.405.0" />
+    <PackageReference Include="VirtoCommerce.OrdersModule.Core" Version="3.418.0" />
+    <PackageReference Include="VirtoCommerce.OrdersModule.Data" Version="3.418.0" />
+    <PackageReference Include="VirtoCommerce.OrdersModule.Data.SqlServer" Version="3.418.0" />
+    <PackageReference Include="VirtoCommerce.Platform.Core" Version="3.437.0" />
+    <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.437.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyCoolCompany.MyTestModule.Core\MyCoolCompany.MyTestModule.Core.csproj" />
+    <ProjectReference Include="..\..\src\MyCoolCompany.MyTestModule.Data\MyCoolCompany.MyTestModule.Data.csproj" />
+    <ProjectReference Include="..\..\src\MyCoolCompany.MyTestModule.Web\MyCoolCompany.MyTestModule.Web.csproj" />
+  </ItemGroup>
+</Project>
