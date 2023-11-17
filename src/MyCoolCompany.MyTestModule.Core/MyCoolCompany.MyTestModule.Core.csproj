@@ -20,4 +20,9 @@
   <ItemGroup>
     <Folder Include="LayoutTemplate\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="Localizations\en.VirtoCommerce.NotificationsExample.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

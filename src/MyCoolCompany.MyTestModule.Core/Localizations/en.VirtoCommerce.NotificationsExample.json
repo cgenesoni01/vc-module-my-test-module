@@ -1,0 +1,17 @@
+{
+  "notificationTypes": {
+    "SampleEmailNotification": {
+      "displayName": "Sample Email Notification",
+      "description": "This notification sends an example"
+    },
+    "NewRegistrationEmailNotification": {
+      "displayName": "New Registration Email Notification",
+      "description": "This notification sends a new registration"
+    },
+    "CustomEmailNotification": {
+      "displayName": "Custom Email Notification",
+      "description": "This notification sends an custom email example"
+    }
+  }
+}
+
