@@ -16,7 +16,7 @@ angular.module(moduleName, [])
                         'platformWebApp.bladeNavigationService',
                         function (bladeNavigationService) {
                             var newBlade = {
-                                id: 'blade1',
+                                id: 'blade1MyTestModule',
                                 controller: 'MyTestModule.helloWorldController',
                                 template: 'Modules/$(MyCoolCompany.MyTestModule)/Scripts/blades/hello-world.html',
                                 isClosingDisabled: true,
@@ -27,8 +27,8 @@ angular.module(moduleName, [])
                 });
         }
     ])
-    .run(['platformWebApp.mainMenuService', '$state',
-        function (mainMenuService, $state) {
+    .run(['platformWebApp.mainMenuService', '$state', 'virtoCommerce.orderModule.knownOperations', 'platformWebApp.ui-grid.extension',
+        function (mainMenuService, $state, knownOperations, gridOptionExtension) {
             //Register module in main menu
             var menuItem = {
                 path: 'browse/MyTestModule',
@@ -39,5 +39,25 @@ angular.module(moduleName, [])
                 permission: 'MyTestModule:access',
             };
             mainMenuService.addMenuItem(menuItem);
+
+            var foundTemplate = knownOperations.getOperation('CustomerOrder');
+            if (foundTemplate) {
+                foundTemplate.detailBlade.metaFields.push(
+                    {
+                        name: 'NewOrderField',
+                        title: "New Order field",
+                        valueType: "ShortText"
+                    });
+            }
+
+            // Register extension to add custom column permanently (data-independent) into the list
+            gridOptionExtension.registerExtension("customerOrder-list-grid", function (gridOptions) {
+                var customColumnDefs = [
+                    { name: 'NewOrderField', displayName: 'orders.blades.customerOrder-list.labels.NewOrderField', width: '***' }
+                ];
+
+                gridOptions.columnDefs = _.union(gridOptions.columnDefs, customColumnDefs);
+            });
+
         }
     ]);

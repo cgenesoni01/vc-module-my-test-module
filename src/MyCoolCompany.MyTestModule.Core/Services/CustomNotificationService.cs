@@ -32,17 +32,7 @@ namespace MyCoolCompany.MyTestModule.Core.Services
                 return  await _notificationSender.SendNotificationAsync(notification);
             }
 
-            var result = new TaskCompletionSource<NotificationSendResult>();
-            result.SetResult
-            (
-                 new NotificationSendResult
-                 {
-                     IsSuccess = false,
-                     ErrorMessage = "Notification template does not exist"
-                 }
-            );
-
-            return await result.Task;
+            throw new InvalidOperationException("Not valid notification");
         }
     }
 }

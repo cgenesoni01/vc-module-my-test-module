@@ -4,11 +4,11 @@ angular.module('MyTestModule')
         blade.title = 'MyTestModule';
 
         blade.refresh = function () {
-            api.get(function (data) {
-                blade.title = 'MyTestModule.blades.hello-world.title';
-                blade.data = data.result;
+            //api.get(function (data) {
+                blade.title = 'MyTestModule title';
+                //blade.data = data.result;
                 blade.isLoading = false;
-            });
+            //});
         };
 
         blade.refresh();

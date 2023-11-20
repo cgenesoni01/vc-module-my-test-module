@@ -8,6 +8,7 @@
   <dependencies>
     <!--<dependency id="VirtoCommerce.Core" version="3.437.1.0" />-->
     <dependency id="VirtoCommerce.Orders" version="3.418.0" />
+    <dependency id="VirtoCommerce.Notifications" version="3.405.0" />
   </dependencies>
 
   <title>MyCoolCompany MyTestModule module</title>

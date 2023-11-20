@@ -88,7 +88,7 @@ public class Module : IModule, IHasConfiguration
         var notificationRegistrar = appBuilder.ApplicationServices.GetService<INotificationRegistrar>();
         var moduleTemplatesPath = Path.Combine(ModuleInfo.FullPhysicalPath, "Templates");
         notificationRegistrar.RegisterNotification<SampleEmailNotification>().WithTemplatesFromPath(moduleTemplatesPath);
-        notificationRegistrar.RegisterNotification<CustomEmailNotification>().WithTemplatesFromPath(moduleTemplatesPath);
+        
 
         //notificationRegistrar.RegisterNotification<SampleEmailNotification>().WithTemplatesFromPath(Path.Combine(moduleTemplatesPath, "Custom"), Path.Combine(moduleTemplatesPath, "Default"));
 

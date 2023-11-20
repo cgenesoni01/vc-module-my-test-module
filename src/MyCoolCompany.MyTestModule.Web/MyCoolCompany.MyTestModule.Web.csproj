@@ -8,12 +8,6 @@
     <SonarQubeTestProject>false</SonarQubeTestProject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VirtoCommerce.NotificationsModule.Core" Version="3.405.0" />
-    <PackageReference Include="VirtoCommerce.NotificationsModule.Data" Version="3.405.0" />
-    <PackageReference Include="VirtoCommerce.NotificationsModule.TemplateLoader.FileSystem" Version="3.405.0" />
-    <PackageReference Include="VirtoCommerce.OrdersModule.Core" Version="3.418.0" />
-    <PackageReference Include="VirtoCommerce.OrdersModule.Data" Version="3.418.0" />
-    <PackageReference Include="VirtoCommerce.OrdersModule.Data.SqlServer" Version="3.418.0" />
     <PackageReference Include="VirtoCommerce.Platform.Core" Version="3.437.0" />
     <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.437.0" />
   </ItemGroup>

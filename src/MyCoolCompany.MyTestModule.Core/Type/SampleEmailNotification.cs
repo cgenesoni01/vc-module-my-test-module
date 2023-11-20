@@ -7,7 +7,7 @@ using VirtoCommerce.NotificationsModule.Core.Model;
 
 namespace MyCoolCompany.MyTestModule.Core.Type
 {
-    public class SampleEmailNotification : CustomEmailNotification
+    public class SampleEmailNotification : EmailNotification
     {
         public SampleEmailNotification() : base(nameof(SampleEmailNotification))
         {
